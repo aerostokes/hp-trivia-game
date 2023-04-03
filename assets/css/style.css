@@ -1,0 +1,29 @@
+.triviaBox {
+    display: flex;
+    flex-direction: column;
+}
+
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px dashed blue;
+    list-style-type: none;    
+}
+
+#answers li {
+    flex-wrap: wrap;
+    flex-basis: 45%;
+    flex-grow: 1;
+    margin: 5px;
+    border: 1px dashed red;
+    height: 150px;
+    line-height: 150px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrong {
+    background: linear-gradient(linear-gradient(-15deg, white, white 49%, red, white 51%, white));
+    
+}

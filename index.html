@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harry Potter Trivia</title>
-    <link rel="stylesheet" href="./assets/css/">
+    <title>Harry Potter Trivia Quiz</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head> 
 <body>
-    
+    <header>
+        <h1>Harry Potter Trivia Quiz</h1>
+    </header>
+    <main>
+        <section class="messageBox">
+            <h2 id="welcome">Think you know a bowtruckle from an alohomora? 
+                <br>Grab your Quick-Quotes Quill and test your Potter proficiency!</h2>
+            <button id="start">Start</button>
+        </section>
+
+        <section class="highScoresBox">
+            <h3>High Scores:</h3>
+            <ol id="highScores"></ol>
+        </section>
+
+        <section class="scoreBox">
+            <h3>Score:</h3>
+            <span id="score"></span>
+        </section>
+
+        <section class="timerBox">
+            <h3>Timer:</h3>
+            <span id="timer"></span>
+        </section>
+
+        <section class="triviaBox">
+            <h4 id="question"></h4>
+            <ol id="answers">
+            </ol>
+        </section>
+
+    </main>
+    <script src="./assets/js/triviaSource.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
