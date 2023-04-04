@@ -1,6 +1,46 @@
+
+.penalty::after {
+    position: absolute;
+    color: red;
+    content: attr(data-penalty);
+    animation: wiggle 2s linear;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg) translate(-10px, -5px);
+    }
+    10% {
+        transform: rotate(-15deg) translate(-10px, -5px);
+    }
+    20% {
+        transform: rotate(15deg) translate(-10px, -5px);
+    }
+    30% {
+        transform: rotate(0deg) translate(-10px, -5px);
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: rotate(10deg) translate(20px, -30px);
+        opacity: 0;
+    }
+
+}
+
+
 .triviaBox {
     display: flex;
     flex-direction: column;
+    margin: 20px 100px;
+}
+
+#question {
+    border: 1px dashed green;
+    text-align: center;
+    font-size: 50px;
 }
 
 #answers {
@@ -25,5 +65,4 @@
 
 .wrong {
     background: linear-gradient(linear-gradient(-15deg, white, white 49%, red, white 51%, white));
-    
 }

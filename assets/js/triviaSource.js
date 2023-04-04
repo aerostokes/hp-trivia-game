@@ -9,4 +9,14 @@ var triviaALL =[
         answer: 2,
         wrongs: [1,3,4]
     },
+    {
+        question: "What color did Ron try to turn Scabbers the day that he and Harry met on the Hogwarts Express?",
+        answer: "yellow",
+        wrongs: ["red","orange","blue"]
+    },
+    {
+        question: "In book 1, what was the date of the Gringotts break-in?",
+        answer: "31 July",
+        wrongs: ["17 June","1 September","13 August"]
+    },
 ];
