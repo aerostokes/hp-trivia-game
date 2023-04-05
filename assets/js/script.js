@@ -149,7 +149,7 @@ function setScreen(mode) {
 function wrongAnswer(target) {
     firstAttempt = false;
     secondsLeft = secondsLeft - penaltySeconds;
-    target.setAttribute("style", "background: linear-gradient(-15deg, white, white 49%, red, white 51%, white);");
+    target.setAttribute("class", "wrong");
     timerSpan.setAttribute("data-penalty", -penaltySeconds + "s");
     timerSpan.setAttribute("class", "penalty");
     setTimeout(() => {
