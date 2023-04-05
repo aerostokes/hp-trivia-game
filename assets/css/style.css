@@ -1,3 +1,214 @@
+:root {
+    --emphasis-color: gold;
+    --score-color: rgb(6, 47, 4);
+    --background-color: rgba(135, 149, 207, 0.892);
+}
+
+body {
+    background: var(--background-color);
+}
+
+header {
+    position: relative;
+    height: 20vh;
+    width: 100%;
+}
+
+header h1 {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bigelow Rules', Garamond, Verdana, cursive;
+    font-size: 80px;
+    color: var(--emphasis-color);
+    text-shadow: 3px 3px 2px black, 0px 0px 1px black;
+}
+
+.banner {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+}
+
+#image1, #image3 {
+    flex-basis: 25%;
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+#image2 {
+    flex-basis: 50%;
+    flex-grow: 2;
+    object-fit: cover;
+}
+
+main {
+    display: flex;
+}
+
+#startScreen {
+    display: flex;
+    width: 100%;
+}
+
+#messageBox {
+    position: relative;
+    flex-basis: 65%;
+    flex-grow: 1;   
+    margin: 100px 25px;
+    border: 1px solid var(--emphasis-color);
+    padding: 60px 100px;
+    font-family: 'Alkatra', cursive;
+    background-image: url(../images/Image-2023-04-04-20-44-35.png);
+    background-size: 100%;
+    background-position: center;
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 1px 1px 1px lightslategray, 0px 0px 4px whitesmoke;
+    color: rgb(0, 0, 96)
+}
+#playerBox {
+    margin-bottom: 25px;
+    font-family: 'Lora', serif;
+    color: rgb(15, 147, 15);
+    text-shadow: 1px 1px 1px black, 0px 0px 4px whitesmoke;
+}
+
+#scoreSummary {
+}
+#playerName {
+    font-family: 'Lora', serif;
+    height: 35px;
+    width: 80px;
+    transform: translatey(-5px);
+    color: rgb(15, 147, 15);
+}
+
+#saveScore {
+    display: inline;
+    background-color: rgb(15, 147, 15);
+    padding: 10px;
+    font-size: 18px;
+    border: 7px outset green;
+    box-shadow: 5px 5px 1px black, 0px 0px 3px black;
+}
+
+#start {
+    width: 200px;
+    margin: 60px 50px 25px;
+    background: var(--emphasis-color);
+    border: 7px outset var(--emphasis-color);
+    box-shadow: 5px 5px 1px black, 0px 0px 3px black;
+}
+
+#highScoresBox {
+    flex-grow: 2;
+    flex-basis: 35%;
+    min-height: 50vh;
+    margin: 50px 25px;
+    box-shadow: 2px 4px 4px black;
+    border: 7px outset var(--emphasis-color);
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+h3 {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+#highScores li {
+    list-style-position: inside;
+    margin: 8px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#gameScreen {
+    display: flex;
+    font-family: 'Lora', serif;
+    min-height: 80vh;
+    padding: 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gameBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+border: 1px dashed black;
+    font-size: 20px;
+}
+
+#scoreBox, #timerBox {
+    margin: 25px 5px;
+    border: 3px solid var(--score-color);
+    color: var(--score-color);
+    padding: 25px 10px;
+    text-align: center;    
+}
+
+#scoreBox {
+    width: 100px;
+    border-radius: 20px;
+}
+
+#timerBox {
+    width: 120px;
+}
+
+#triviaBox {
+    flex-grow: 2;
+    border: 5px outset var(--emphasis-color);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 70%;
+}
+
+#question {
+    text-align: center;
+    font-size: 32px;
+    padding: 50px;
+    background-color: var(--background-color);
+
+}
+
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 5px outset var(--emphasis-color);
+    list-style-type: none;    
+    align-items: center;
+}
+
+#answers li {
+    flex-wrap: wrap;
+    flex-basis: 45%;
+    flex-grow: 1;
+    margin: 10px;
+    border: 4px outset black;
+    box-shadow: 6px 6px 1px rgb(33, 33, 35);
+    background-color: var(--background-color);
+    max-height: 150px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.wrong {
+    background: linear-gradient(linear-gradient(-15deg, white, white 49%, red, white 51%, white));
+}
+
 
 .penalty::after {
     position: absolute;
@@ -28,41 +239,4 @@
         opacity: 0;
     }
 
-}
-
-
-.triviaBox {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 100px;
-}
-
-#question {
-    border: 1px dashed green;
-    text-align: center;
-    font-size: 50px;
-}
-
-#answers {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px dashed blue;
-    list-style-type: none;    
-}
-
-#answers li {
-    flex-wrap: wrap;
-    flex-basis: 45%;
-    flex-grow: 1;
-    margin: 5px;
-    border: 1px dashed red;
-    height: 150px;
-    line-height: 150px;
-    font-size: x-large;
-    font-weight: bold;
-    text-align: center;
-}
-
-.wrong {
-    background: linear-gradient(linear-gradient(-15deg, white, white 49%, red, white 51%, white));
 }

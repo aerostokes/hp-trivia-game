@@ -5,43 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Potter Trivia Quiz</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Bigelow+Rules&family=Lora:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head> 
 <body>
     <header>
         <h1>Harry Potter Trivia Quiz</h1>
+        <figure class="banner">
+            <img id="image1" src="./assets/images/juniperphoton-uxzhBjAFO5E-unsplash.jpg" alt="Hogwarts Express">
+            <img id="image2" src="./assets/images/jules-marvin-eguilos-YrcfSDVli3Y-unsplash.jpg" alt="Howarts">
+            <img id="image3" src="./assets/images/klim-musalimov-gZZgdrlTgus-unsplash.jpg" alt="Hogwarts Clock">
+        </figure>
     </header>
     <main>
-        <section class="messageBox">
-            <h2 id="message1">Think you know everything about the wizarding world from accio to zouwu?</h2>
-            <form class="playerScore">
-                <input type="text" name="playerName" id="playerName" placeholder="Name">
-                <button id="saveScore">Save Score</button>
-            </form>
-            <h2 id="message2">Well grab your Quick-Quotes Quill and let's test your Potter proficiency!</h2>
-            <button id="start">Start</button>
+        <section id="startScreen">
+            <section id="messageBox">
+                <form id="playerBox">
+                    <span id="scoreSummary"></span>
+                    <input type="text" name="playerName" id="playerName" placeholder="Initials">
+                    <button id="saveScore">Save Score➡</button>
+                </form>
+                <h2 id="message">Think you know the wizarding world from accio to zouwu? Well grab your Quick-Quotes Quill and let's test your Potter proficiency!</h2>
+                <button id="start">Start</button>
+            </section>
+            
+            <section id="highScoresBox">
+                <h3>High Scores:</h3>
+                <ol id="highScores"></ol>
+            </section>
         </section>
 
-        <section class="highScoresBox">
-            <h3>High Scores:</h3>
-            <ol id="highScores"></ol>
-        </section>
-
-        <section class="scoreBox">
-            <h3>Score:</h3>
-            <span id="score"></span>
-        </section>
-
-        <section class="timerBox">
-            <h3>Timer:</h3>
-            <span id="timer"></span>
-        </section>
-
-        <section class="triviaBox">
-            <h4 id="question"></h4>
-            <ol id="answers">
-            </ol>
+        <section id="gameScreen">
+            <section class="gameBox">
+                <section id="scoreBox">
+                    <h3>Score:</h3>
+                    <span id="score"></span>
+                </section>
+                
+                <section id="timerBox">
+                    <h3>Timer:</h3>
+                    <span id="timer"></span>
+                </section>
+            </section>
+            
+            <section id="triviaBox">
+                <h4 id="question"></h4>
+                <ol id="answers">
+                </ol>
+            </section>
         </section>
 
     </main>

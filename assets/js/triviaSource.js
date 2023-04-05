@@ -19,4 +19,14 @@ var triviaALL =[
         answer: "31 July",
         wrongs: ["17 June","1 September","13 August"]
     },
+    {
+        question: "What's the name of Hagrid's dog",
+        answer: "Fang",
+        wrongs: ["Crookshanks","Pickett","Scabbers"]
+    },
+    {
+        question: "How many silver Sickles in a Galleon",
+        answer: "17",
+        wrongs: ["19","10","15"]
+    },
 ];
