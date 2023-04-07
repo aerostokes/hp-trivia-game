@@ -81,14 +81,23 @@ function startTimer() {
 // On answer click, if the answer is correct, update the score and set the next question. If not, mark it incorrect and wait for another attempt
 function handlerAnswerClick (event) {
     if (event.target.textContent == answer) {
-        if (firstAttempt) score++;
-        questionIndex++;
-        if (questionIndex < quizLength) setQuestion(questionIndex);
-        else gameOver();
+        rightAnswer(event.target);
     }
     else if (event.target.matches("li")) {
         wrongAnswer(event.target);
     }
+}
+
+
+// When selecting a write answer, mark it correct 
+function rightAnswer(target) {
+    target.setAttribute("class", "right");
+    setTimeout(() => {
+        if (firstAttempt) score++;
+        questionIndex++;
+        if (questionIndex < quizLength) setQuestion(questionIndex);
+        else gameOver();
+    }, 500);
 }
 
 // Update the score, remove current (if any) question, and display next question 
@@ -149,9 +158,11 @@ function wrongAnswer(target) {
     firstAttempt = false;
     secondsLeft = secondsLeft - penaltySeconds;
     target.setAttribute("class", "wrong");
+    target.setAttribute("data-penalty", "Try Again")
     timerSpan.setAttribute("data-penalty", -penaltySeconds + "s");
     timerSpan.setAttribute("class", "penalty");
     setTimeout(() => {
+        target.removeAttribute("data-penalty")
         timerSpan.removeAttribute("data-penalty");
         timerSpan.removeAttribute("class");
     }, 2000);
