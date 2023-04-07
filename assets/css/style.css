@@ -23,6 +23,7 @@ header h1 {
     font-size: 80px;
     color: var(--emphasis-color);
     text-shadow: 3px 3px 2px black, 0px 0px 1px black;
+    white-space: nowrap;
 }
 
 .banner {
@@ -198,7 +199,7 @@ h3 {
     border: 4px outset black;
     box-shadow: 6px 6px 1px rgb(33, 33, 35);
     max-height: 150px;
-    font-size: x-large;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
     padding: 40px 20px;
@@ -239,3 +240,63 @@ h3 {
     }
 
 }
+
+@media screen and (max-width: 992px) {
+    #startScreen {
+      flex-direction: column;
+    }
+    #messageBox, #highScoresBox {
+        margin: 25px;
+        padding: 25px;
+    }
+    #gameScreen {
+        padding: 20px;
+    }
+    .gameBox {
+        font-size: 16px;
+    }
+    #question {
+        font-size: 28px;
+        padding: 25px;
+    }    
+    #answers li {
+        max-height: 150px;
+        font-size: 22px;
+        padding: 40px 20px;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 50px;
+    }
+    #MessageBox, #highScoresBox {
+        font-size: 16px;
+    }
+    #gameScreen {
+        flex-direction: column;
+        padding:8px;
+    }
+    .gameBox {
+        flex-direction: row;
+        font-size: 12px;
+    }
+    #scoreBox, #timerBox {
+        margin: 8px;
+        padding: 8px;
+    }
+    #triviaBox {
+        margin: 8px;
+        width: 100%;
+    }
+    #question {
+        font-size: 24px;
+        padding: 10px;
+    }    
+    #answers li {
+        max-height: 80px;
+        font-size: 16px;
+        padding: 30px 10px;
+    }
+  }

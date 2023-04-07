@@ -1,4 +1,3 @@
-// Declare variables 
 var quizLength = 10;
 var secondsAllotment = 300;
 var penaltySeconds = 10;
@@ -118,7 +117,7 @@ function gameOver() {
 
     var scorePercent = score / quizLength * 100
     if (scorePercent == 100) messageSpan.textContent = "Outstanding! That's a score that Hermione would be proud of!";
-    else if (scorePercent >= 90) messageSpan.textContent = "Excellent! Look like you're NEWT ready!";
+    else if (scorePercent >= 90) messageSpan.textContent = "Excellent! Looks like you're NEWT ready!";
     else if (scorePercent >= 80) messageSpan.textContent = "Good job! Keep studying for those OWL's";
     else if (scorePercent >= 70) messageSpan.textContent = "Not too bad...for a first year.";
     else if (scorePercent >= 60) messageSpan.textContent = "Hmm...you don't have any squibs in your family tree, do you..?";
